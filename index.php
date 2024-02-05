@@ -21,19 +21,19 @@
             require_once 'Artist.php';
 
             // Livre
-            $book = new Book("Harry Potter à l'école des sorciers", "J.K. Rowling", 309);
+            $book = new Book("Thomas et sa BMW", "Thomas Spencer", 309);
             $book->toggleCheckOutStatus();
-            $book->addRating(5);
-            $book->addRating(4);
             $book->addRating(3);
+            $book->addRating(1);
+            $book->addRating(9);
             echo "<p>" . $book->getTitle() . " est " . ($book->getIsCheckedOut() ? "emprunté" : "disponible") . " avec une note moyenne de " . $book->getAverageRating() . ".</p>";
 
             // Film
-            $movie = new Movie("Avengers: Endgame", "Marvel Studios", 181);
+            $movie = new Movie("Scarface", "IconStudio", 181);
             $movie->toggleCheckOutStatus();
+            $movie->addRating(7);
             $movie->addRating(5);
-            $movie->addRating(5);
-            $movie->addRating(4);
+            $movie->addRating(2);
             echo "<p>" . $movie->getTitle() . " est " . ($movie->getIsCheckedOut() ? "emprunté" : "disponible") . " avec une note moyenne de " . $movie->getAverageRating() . ".</p>";
 
             // Album avec Chansons
